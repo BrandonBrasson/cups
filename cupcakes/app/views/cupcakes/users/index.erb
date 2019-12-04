@@ -1,0 +1,21 @@
+<h1>Welcome to your homepage, <%= @user.username %></h1>
+<h3>Here are the cupcakes you have bookmarked:</h3>
+<ul>
+
+  <% @user.bookmark_cupcakes.each do |cupcake| %>
+    <li><h3> <a href="/cupcakes/<%= cupcake.id %>"> <%= cupcake.name %> </a> </h3>  </li>
+  <% end %>
+</ul>
+
+<h3>Here are the cupcakes you have created:</h3>
+
+  <% @user.cupcakes.each do |cupcake| %>
+    <li><h3> <a href="/cupcakes/<%= cupcake.id %>"> <%= cupcake.name %> </a> </h3>  </li>
+  <% end %>
+</ul>
+
+<br>
+
+<a href="/cupcakes">Return to Cupcake Bookmarker Homepage</a><br>
+<a href="/cupcakes/new"> Add Your New Recipe </a>
+.

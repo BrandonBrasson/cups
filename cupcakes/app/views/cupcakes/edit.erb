@@ -1,0 +1,21 @@
+<h1>Edit Cupcake</h1>
+
+<a href="/cupcakes/<%= @cupcake.id %>">Go back</a>
+
+<form action="/cupcakes/<%= @cupcake.id %>" method="post">
+  <input type="hidden" name="_method" value="patch" />
+  <div>
+    <label for="">Name:</label>
+    <input type="text" name="cupcake[name]
+    "value="<%= @cupcake.name %>" />
+  </div>
+  <div>
+    <label for="">Price:</label>
+    <input type="text" name="cupcake[price]"
+    "value="<%= @cupcake.price %>" />
+  </div>
+  <input type="submit" value="Edit Cupcake" />
+</form>
+<form action="/cupcakes/<%= @cupcake.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" />
+  <input id="mysubmit" type="submit" value="Delete Cupcake" /></form>
